@@ -33,7 +33,7 @@ def get_filters():
         print("New York City")
         city = 'new york city'
     while city not in CITY_DATA:
-        city = input("Sorry please select: ch, dc, ny")
+        city = input("Sorry please select: ch, dc, ny").lower()
         if city == 'ch':
             print("Chicago")
             city = 'chicago'
@@ -45,102 +45,102 @@ def get_filters():
             city = 'new york city'
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = input("Pick a Month by entering a number: January (1), February (2), March (3), April (4), May (5), June (6), All (7)")
-    if month == '1':
+    month = input("Pick a Month by the first 3 letters: January (jan), February (feb), March (mar), April (apr), May (may), June (jun), All (all)").lower()
+    if month == 'jan':
         print("January")
         month = 'january'
-    if month == '2':
+    if month == 'feb':
         print("February")
         month = 'february'
-    if month == '3':
+    if month == 'mar':
         print("March")
         month = 'march'
-    if month == '4':
+    if month == 'apr':
         print("April")
         month = 'april'
-    if month == '5':
+    if month == 'may':
         print("May")
         month = 'may'
-    if month == '6':
+    if month == 'jun':
         print("June")
         month = 'june'
-    if month == '7':
+    if month == 'all':
         print("All Months")
         month = 'all'
     while month not in MONTH_LIST:
-        month = input("Sorry please select a number 1 to 6 for January to June (7 for All)")
-        if month == '1':
+        month = input("Sorry, please select jan, feb, mar, apr, may, jun or all").lower()
+        if month == 'jan':
             print("January")
             month = 'january'
-        if month == '2':
+        if month == 'feb':
             print("February")
             month = 'february'
-        if month == '3':
+        if month == 'mar':
             print("March")
             month = 'march'
-        if month == '4':
+        if month == 'apr':
             print("April")
             month = 'april'
-        if month == '5':
+        if month == 'may':
             print("May")
             month = 'may'
-        if month == '6':
+        if month == 'jun':
             print("June")
             month = 'june'
-        if month == '7':
+        if month == 'all':
             print("All Months")
             month = 'all'
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input("Pick a day: Monday (1), Tuesday (2), Wednesday (3), Thursday (4), Friday (5), Saturday (6), Sunday (7), or All (8)")
-    if day == '1':
+    day = input("Pick a day by first 3 letters: Monday (mon), Tuesday (tue), Wednesday (wed), Thursday (thu), Friday (fri), Saturday (sat), Sunday (sun), or All (all)").lower()
+    if day == 'mon':
         print("Monday")
         day = 'monday'
-    if day == '2':
+    if day == 'tue':
         print("Tuesday")
         day = 'tuesday'
-    if day == '3':
+    if day == 'wed':
         print("Wednesday")
         day = 'wednesday'
-    if day == '4':
+    if day == 'thu':
         print("Thursday")
         day = 'thursday'
-    if day == '5':
+    if day == 'fri':
         print("Friday")
         day = 'friday'
-    if day == '6':
+    if day == 'sat':
         print("Saturday")
         day = 'saturday'
-    if day == '7':
+    if day == 'sun':
         print("Sunday")
         day = 'sunday'
-    if day == '8':
+    if day == 'all':
         print("All")
         day = 'all'
     while day not in DAY_LIST:
-        day = input("Sorry please select a number 1 to 8")
-        if day == '1':
+        day = input("Sorry, please select a day (mon, tue, wed...) or all").lower()
+        if day == 'mon':
             print("Monday")
             day = 'monday'
-        if day == '2':
+        if day == 'tue':
             print("Tuesday")
             day = 'tuesday'
-        if day == '3':
+        if day == 'wed':
             print("Wednesday")
             day = 'wednesday'
-        if day == '4':
+        if day == 'thu':
             print("Thursday")
             day = 'thursday'
-        if day == '5':
+        if day == 'fri':
             print("Friday")
             day = 'friday'
-        if day == '6':
+        if day == 'sat':
             print("Saturday")
             day = 'saturday'
-        if day == '7':
+        if day == 'sun':
             print("Sunday")
             day = 'sunday'
-        if day == '8':
+        if day == 'all':
             print("All")
             day = 'all'
     print("The city: " + city)
