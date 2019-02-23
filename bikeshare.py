@@ -264,6 +264,7 @@ def user_stats(df):
     print('-'*40)
     
 def five_rows(df):
+    # Display 5 rows of data from table if requested, loop request for 5 more lines
     again = 'yes'
     i = 0
     while True:
