@@ -143,9 +143,7 @@ def get_filters():
         if day == 'all':
             print("All")
             day = 'all'
-    print("The city: " + city)
-    print("The month: " + month)
-    print("The day: " + day) 
+    print('City: {} ; Month(s): {} ; Day(s): {}\n'.format(city, month, day))
     print('-'*40)
     return city, month, day
 
