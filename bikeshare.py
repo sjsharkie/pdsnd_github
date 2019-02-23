@@ -21,7 +21,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # User input for city (chicago, new york city, washington).
     city = input("Let's Explore a City, Please select Chicago (ch), Washington (dc) or New York City (ny)")
     city = city.lower()
     if city == 'ch':
@@ -45,7 +45,7 @@ def get_filters():
             print("New York City")
             city = 'new york city'
 
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # User input for month
     month = input("Pick a Month by entering a number: January (1), February (2), March (3), April (4), May (5), June (6), All (7)")
     if month == '1':
         print("January")
@@ -92,7 +92,7 @@ def get_filters():
             print("All Months")
             month = 'all'
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # User input for day of week
     day = input("Pick a day: Monday (1), Tuesday (2), Wednesday (3), Thursday (4), Friday (5), Saturday (6), Sunday (7), or All (8)")
     if day == '1':
         print("Monday")
@@ -181,15 +181,15 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # Display the most common month
     mode_month = df['month'].mode()[0]
     print('The most common month: ', mode_month)
 
-    # TO DO: display the most common day of week
+    # Display the most common day of week
     mode_day = df['day_of_week'].mode()[0]
     print('The most common day: ', mode_day)
 
-    # TO DO: display the most common start hour
+    # Display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     mode_hour = df['hour'].mode()[0]
     print('Most Common Hour:', mode_hour)
@@ -204,15 +204,15 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # Display most commonly used start station
     mode_start = df['Start Station'].value_counts().idxmax()
     print('The most common start station: ', mode_start)
 
-    # TO DO: display most commonly used end station
+    # Display most commonly used end station
     mode_end = df['End Station'].value_counts().idxmax()
     print('The most common end station: ', mode_end)
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # Display most frequent combination of start station and end station trip
     mode_trip = df.groupby(['Start Station', 'End Station']).size().nlargest(1)
     print('The most common trip: ', mode_trip)
 
@@ -226,11 +226,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # Display total travel time
     total_travel = sum(df['Trip Duration'])
     print('Total travel time: ', total_travel/3600, "hours")
 
-    # TO DO: display mean travel time
+    # Display mean travel time
     mean_travel = df['Trip Duration'].mean()
     print('Mean travel time:', mean_travel/3600, "hours")
 
@@ -244,16 +244,16 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     user_types = df['User Type'].value_counts()
     print('Count of user types:\n', user_types)
 
-    # TO DO: Display counts of gender
+    # Display counts of gender
     if 'Gender' in df.columns:
         gender = df["Gender"].value_counts()
         print('\n', gender, '\n')
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns:
         birth_year = df["Birth Year"]
         print('The earliest birthyear: ' +str(int(birth_year.min())))
