@@ -21,5 +21,21 @@ washington.csv
 new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+These links were helpful and used to create final bikeshare code:
+
+https://stackoverflow.com/questions/30222533/create-a-day-of-week-column-in-a-pandas-dataframe-using-python
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html
+https://www.geeksforgeeks.org/python-read-csv-using-pandas-read_csv/
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html
+https://www.w3resource.com/python-exercises/pandas/index-dataframe.php
+https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html
+https://stackoverflow.com/questions/15138973/how-to-get-the-number-of-the-most-frequent-value-in-a-column
+https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
+https://stackoverflow.com/questions/24870306/how-to-check-if-a-column-exists-in-pandas
+https://stackoverflow.com/questions/40454030/count-and-sort-with-pandas/44117255
+https://stackoverflow.com/questions/35295132/typeerror-unsupported-operand-types-for-str-and-int-for-degrees
+https://stackoverflow.com/questions/22617/format-numbers-to-strings-in-python
+https://stackoverflow.com/questions/47487753/when-is-it-appropriate-to-use-df-value-counts-vs-df-groupby-count
+https://stackoverflow.com/questions/43772362/how-to-print-a-specific-row-of-a-pandas-dataframe
 
